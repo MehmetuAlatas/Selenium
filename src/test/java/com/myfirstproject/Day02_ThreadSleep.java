@@ -27,10 +27,10 @@ public class Day02_ThreadSleep {
          * It is a HARD WAIT
          * It means driver will wait for 5 seconds no matter what.
          * If driver do not need any wait, it will still wait exactly 5 seconds
-         * Testers should avoid using Thread.sleep cause it puts unnecesary waits
-         * We will learn selenium implicit and explicit waits in the upcaoming classses
+         * Testers should avoid using Thread.sleep cause it puts unnecessary waits
+         * We will learn selenium implicit and explicit waits in the upcoming classes
          *
-         * This wait throws acception so add exception to method signature or use try catch
+         * This wait throws exception so add exception to method signature or use try catch
          * */
 
 
