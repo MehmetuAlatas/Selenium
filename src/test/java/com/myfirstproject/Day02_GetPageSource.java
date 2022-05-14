@@ -7,10 +7,14 @@ public class Day02_GetPageSource {
 
     public static void main(String[] args) {
 //        System.setProperty("webdriver.chrome.driver","./drivers/chromedriver");
+
         System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");//WINDOWS
+
         WebDriver driver = new ChromeDriver();
+
         driver.manage().window().maximize();
 //        Navigate to amazon homepage
+
         driver.get("https://www.amazon.com");
 
 //        Test if amazon contains “Registry” on the homepage

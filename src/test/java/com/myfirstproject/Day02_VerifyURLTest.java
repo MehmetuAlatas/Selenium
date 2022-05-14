@@ -7,7 +7,7 @@ public class Day02_VerifyURLTest {
 
     public static void main(String[] args) {
 //        System.setProperty("webdriver.chrome.driver","./drivers/chromedriver");
-        System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");//WINDOWS
+        System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");//WINDOWS
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
 
@@ -18,12 +18,12 @@ public class Day02_VerifyURLTest {
         String actualURL = driver.getCurrentUrl();
         String expectedURL = "www.google.com";
 
-        if (actualURL.equals(expectedURL)){
+        if (actualURL.equals(expectedURL)) {
             System.out.println("PASSED");
-        }else {
+        } else {
             System.out.println("FAILED");
-            System.out.println("ACTUAL : "+actualURL);
-            System.out.println("EXPECTED : "+expectedURL);
+            System.out.println("ACTUAL : " + actualURL);
+            System.out.println("EXPECTED : " + expectedURL);
         }
         /*
         *

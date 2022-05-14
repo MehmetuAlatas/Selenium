@@ -10,7 +10,7 @@ public class Day02_FirefoxBrowserDemo {
     public static void main(String[] args) {
 //    Set Path
 //        System.setProperty("webdriver.gecko.driver","./drivers/geckodriver");//mac
-       System.setProperty("webdriver.gecko.driver","./drivers/geckodriver.exe");//windows
+        System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver.exe");//windows
 
 //    Create gecko driver
         WebDriver driver = new FirefoxDriver();

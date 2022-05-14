@@ -1,13 +1,15 @@
 package com.myfirstproject;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
 public class Day01_BasicNavigations {
     //    Create a new class under : BasicNavigations
 //    Create main method
     public static void main(String[] args) {
         //    Set Path
-       // System.setProperty("webdriver.chrome.driver","./drivers/chromedriver");
-   System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");//windows
+        // System.setProperty("webdriver.chrome.driver","./drivers/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");//windows
         //    Create chrome driver
         WebDriver driver = new ChromeDriver();
         //    Maximize the window
@@ -20,7 +22,7 @@ public class Day01_BasicNavigations {
 //    Navigate back to google
         driver.navigate().back();
 //    Navigate forward to amazon
-      //  driver.navigate().forward();
+        //  driver.navigate().forward();
 //    Refresh the page
         driver.navigate().refresh();
 //    Close/Quit the browser

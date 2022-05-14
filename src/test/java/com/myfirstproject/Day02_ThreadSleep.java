@@ -1,4 +1,5 @@
 package com.myfirstproject;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -6,7 +7,7 @@ public class Day02_ThreadSleep {
     public static void main(String[] args) throws InterruptedException {
 
 //        System.setProperty("webdriver.chrome.driver","./drivers/chromedriver");
-        System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");//WIN
+        System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");//WIN
         WebDriver driver = new ChromeDriver();
 
         driver.get("https://www.google.com/");
@@ -32,9 +33,6 @@ public class Day02_ThreadSleep {
          *
          * This wait throws exception so add exception to method signature or use try catch
          * */
-
-
-
 
 
     }
