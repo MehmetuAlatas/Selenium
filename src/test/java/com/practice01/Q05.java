@@ -25,9 +25,8 @@ public class Q05 {
 2.deleteButtonsAndValidate()
 */
     WebDriver driver;
-
     @Before
-    public void setUp() {
+    public void setUp(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -35,16 +34,16 @@ public class Q05 {
     }
 
     @Test
-    public void test() {
+    public void test(){
         driver.get("http://the-internet.herokuapp.com/add_remove_elements/");
-        createButtons(driver, 100);
-        deleteButtonsAndValidate(driver, 20);
-
+        createButtons(driver,100);
+        deleteButtonsAndValidate(driver,20);
     }
+
 
     public void createButtons(WebDriver driver, int number) {
         WebElement addButton = driver.findElement(By.xpath("//button[@onclick='addElement()']"));
-        for (int i = 1; i <= number; i++) {
+        for(int i = 1; i<= number; i++){
             addButton.click();
         }
     }
@@ -54,20 +53,17 @@ public class Q05 {
         int sizeBeforeDelete = elementBefore.size();
 
         int counter = 0;
-        for (WebElement w : elementBefore) {
+        for(WebElement w : elementBefore){
             counter++;
-            if (counter > numOfDelete) {
+            if(counter > numOfDelete){
                 break;
             }
             w.click();
         }
 
-        List<WebElement> elementsAfter = driver.findElements(By.xpath("//button[@onclick='deleteElement()']"));
-        int sizeAfterDelete = elementsAfter.size();
+        List<WebElement> elementAfter = driver.findElements(By.xpath("//button[@onclick='deleteElement()']"));
+        int sizeAfterDelete = elementAfter.size();
 
-        Assert.assertEquals(sizeBeforeDelete - numOfDelete, sizeAfterDelete);
-
-
+        Assert.assertEquals(sizeBeforeDelete-numOfDelete,sizeAfterDelete);
     }
-
 }
