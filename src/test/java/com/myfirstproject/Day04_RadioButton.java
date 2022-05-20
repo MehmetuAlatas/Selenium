@@ -1,4 +1,5 @@
 package com.myfirstproject;
+import com.github.javafaker.Faker;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Before;
@@ -11,6 +12,7 @@ import org.openqa.selenium.support.ui.Select;
 import java.time.Duration;
 public class Day04_RadioButton {
     WebDriver driver;
+    Faker faker = new Faker();
     @Before
     public void setUp(){
         WebDriverManager.chromedriver().setup();
@@ -27,15 +29,15 @@ public class Day04_RadioButton {
 //
 //        TEST CASE:
 //        Click on Create new account
-        driver.findElement(By.linkText("Yeni Hesap Oluştur")).click();
+        driver.findElement(By.linkText("Create New Account")).click();
 //        Enter first name
-        driver.findElement(By.name("firstname")).sendKeys("test f name");
+        driver.findElement(By.name("firstname")).sendKeys(faker.name().firstName());
 //        Enter last name
-        driver.findElement(By.name("lastname")).sendKeys("test l name");
+        driver.findElement(By.name("lastname")).sendKeys(faker.name().lastName());
 //        Enter mobile number or email
-        driver.findElement(By.name("reg_email__")).sendKeys("112233455");
+        driver.findElement(By.name("reg_email__")).sendKeys(faker.phoneNumber().cellPhone());
 //        Enter new password
-        driver.findElement(By.name("reg_passwd__")).sendKeys("secretPass!");
+        driver.findElement(By.name("reg_passwd__")).sendKeys(faker.internet().password());
 //        Enter birthday(LATER)
 //        Jan / 15 / 2000 => Try!
         //MONTH
@@ -44,7 +46,7 @@ public class Day04_RadioButton {
         //2.Create select object
         Select selectMonth = new Select(monthDropdown);
         //3.Choose Jan
-        selectMonth.selectByVisibleText("Oca");
+        selectMonth.selectByVisibleText("Jan");
         //DAY
         //1.Locate the day dropdown
         WebElement dayDropdown = driver.findElement(By.xpath("//select[@id='day']"));
