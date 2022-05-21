@@ -6,6 +6,8 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import java.util.List;
+
 public class Day06_Iframe extends TestBase {
 
         //    Create a class: IFrameTest
@@ -67,6 +69,8 @@ public class Day06_Iframe extends TestBase {
 
 
 //      How do you find how many iframes are there in a page?
+        List<WebElement> iframes=driver.findElements(By.tagName("iframe"));
+        System.out.println("iframe number :"+iframes.size());
 
     }
 
