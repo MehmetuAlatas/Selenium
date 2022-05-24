@@ -1,5 +1,6 @@
 package com.myfirstproject.utilities;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,10 +24,10 @@ public abstract class TestBase {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
     }
-    //    @After
-//    public void tearDown(){
-//        driver.quit();
-//    }
+        @After
+    public void tearDown(){
+        driver.quit();
+    }
     /*
      * Create a reusable method for clicking checkbox
      * @param checkboxElement : WebElement of the checkbox

@@ -11,7 +11,7 @@ public class Day08_CheckboxUtil extends TestBase {
         WebElement checkbox2 = driver.findElement(By.xpath("(//input[@type='checkbox'])[2]"));
 
         Thread.sleep(3130);
-        selectCheckBox(checkbox1,false);
+        selectCheckBox(checkbox1,true);
 
         Thread.sleep(3130);
         selectCheckBox(checkbox2,false);
