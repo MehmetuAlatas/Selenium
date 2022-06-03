@@ -7,7 +7,7 @@
     <Appenders>
         <!--        formatting fileName for dynamic name generation-->
         <RollingFile name="file"
-                     filePattern="${basePath}/TechProEd-%d{HH:mm:ss.SSS}.log">
+                     filePattern="${basePath}/TechProEd-%d{HH-mm-ss-SSS}.log">
             <PatternLayout>
                 <pattern>%d %p %c{1.} [%t] %m%n</pattern>
             </PatternLayout>
@@ -44,22 +44,14 @@
         DEBUG  500
         TRACE  600
         ALL    Integer.MAX_VALUE
-
         If i say level="trace", then logs will be anything above trace
         if I say error, then logs will be error and fatal,..
-
         In summary, this xmal is ued for configuration of log4j
         There is configuration
         Under configuration, there is Appenders(where to log) and Loggers(Specify the loggers, how, which ones)
-
-
-
         Note that we can customize this logger.
-        Add more logger under loggers for custumizing specific package, class,...
-
-
+        Add more logger under loggers for customizing specific package, class,...
         How to write the log messages to a file? Use RollingFile in apperders.
-
         <RollingFile name="Rolling-${sd:type}" fileName="${filename}"
                               filePattern="target/rolling1/test1-${sd:type}.%i.log.gz">
                    <PatternLayout>
@@ -67,5 +59,4 @@
                    </PatternLayout>
                    <SizeBasedTriggeringPolicy size="500" />
                  </RollingFile>
-
         -->
